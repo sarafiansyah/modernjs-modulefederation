@@ -1,0 +1,28 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "ESNext",
+        "jsx": "react-jsx",
+        "moduleResolution": "node",
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "allowJs": true,
+        "checkJs": false,
+        "noEmit": false, // allow emitting files
+        "declaration": true, // generate .d.ts files
+        "outDir": "./dist", // emit JS here, safe from src overwrite
+        "declarationDir": "./types", // emit .d.ts here for MF
+        "baseUrl": "./",
+        "paths": {
+            "@shared/*": ["../shared/*"],
+            "@api/*": ["./api/lambda/*"],
+            "@constants/*": ["src/constants/*"]
+        }
+    },
+    "include": ["src", "module-federation.config.ts", "api"],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "src/modern.runtime.js" // exclude runtime file that TS shouldn't overwrite
+    ]
+}

@@ -1,0 +1,16 @@
+/* index.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+html,
+body,
+#root {
+    height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    font-family: PingFang SC, Hiragino Sans GB, Microsoft YaHei, Arial,
+        sans-serif !important;
+    background: #eceeef !important;
+}

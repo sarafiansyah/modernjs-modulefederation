@@ -156,7 +156,7 @@ const PagePlantStorageLocation = ({ responsibleUserId }) => {
             width: 150,
         },
         {
-            title: "STATUS",
+            title: "Status",
             dataIndex: "status_name",
             align: "center",
             width: "8%",

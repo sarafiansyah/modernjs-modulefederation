@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { ReactComponent as KreasiPanganIcon } from "@/public/kreasipangan02.svg";
-import KreasiPanganIconMinimized from "@/public/kedaisayur-app.png";
+import { ReactComponent as SkuventoryIcon } from "@/public/skuventory-logo-01.svg";
+import SkuventoryIconMinimized from "@/public/skuprodlogo.png";
 import {
     Layout,
     Menu,
@@ -139,7 +139,7 @@ export default function DashboardLayout() {
         <ConfigProvider
             theme={{
                 token: {
-                    colorPrimary: "#32bd37ff",
+                    colorPrimary: "#D49647",
                 },
             }}
         >
@@ -187,14 +187,40 @@ export default function DashboardLayout() {
                     >
                         {collapsed ? (
                             <img
-                                src={KreasiPanganIconMinimized}
+                                src={SkuventoryIconMinimized}
                                 alt="Kitten"
                                 width={30}
                             />
                         ) : (
-                            <KreasiPanganIcon width={200} height={200} />
+                            <SkuventoryIcon width={200} />
                         )}
                     </div>
+                    {!collapsed && (
+                        <div style={{ marginTop: -5 }}>
+                            <Card
+                                hoverable
+                                onClick={() => setCollapsed(!collapsed)}
+                                style={{
+                                    margin: "16px",
+                                    backgroundColor: "#D49647",
+                                    color: "#fff",
+                                    fontWeight: "bold",
+                                    fontSize: "14px",
+                                    borderRadius: 8,
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    cursor: "pointer",
+                                    userSelect: "none",
+                                    transition: "all 0.3s ease",
+                                    height: 22,
+                                    textAlign: "center",
+                                }}
+                            >
+                                {collapsed ? "K" : "WAREHOUSE"}
+                            </Card>
+                        </div>
+                    )}
                     <div
                         style={{
                             paddingLeft: 0,
@@ -367,7 +393,7 @@ export default function DashboardLayout() {
                             fontFamily: "Poppins, sans-serif",
                         }}
                     >
-                        © {new Date().getFullYear()} Kreasi Pangan Samadhi. All
+                        © {new Date().getFullYear()} Skuventory Indonesia. All
                         Rights Reserved
                     </Card>
                 </Layout>
